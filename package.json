@@ -1,0 +1,39 @@
+{
+  "name": "food-villa",
+  "version": "1.0.0",
+  "description": "Food App",
+  "scripts": {
+    "start": "rm -rf .parcel-cache && parcel index.html --no-cache",
+    "build": "rm -rf .parcel-cache && parcel build index.html",
+    "test": "npm run jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/frontendguru1/food-villa.git"
+  },
+  "browserslist": "last 2 Chrome versions",
+  "keywords": [
+    "Food",
+    "App",
+    "Food React App"
+  ],
+  "author": "FrontEndGurus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frontendguru1/food-villa/issues"
+  },
+  "homepage": "https://github.com/frontendguru1/food-villa#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2",
+    "process": "^0.11.10",
+    "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.2"
+  }
+}

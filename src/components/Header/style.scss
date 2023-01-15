@@ -1,0 +1,95 @@
+@import "../../css/varable";
+.app-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  // justify-content: space-between;
+  @include toRem(padding-top, 15);
+  @include toRem(padding-bottom, 15);
+
+  .logo-container {
+    .logo-img {
+      img {
+        @include toRem(margin-right, 12);
+        width: 90px;
+        height: auto;
+      }
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $primary;
+    .logo {
+      @include fontSize(36);
+      font-weight: $bold;
+      line-height: 100%;
+  
+      span {
+        color: $orange_dark;
+        font-weight: $light;
+        display: block;
+        @include fontSize(32);
+        @include toRem(letter-spacing, 3.8);
+      }
+    }
+  }
+
+  .header-icons {
+    @include toRem(padding-left, 30);
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        list-style: none;
+        @include toRem(margin-left, 26);
+
+        &:first-child {
+          position: relative;
+          @include toRem(padding-top, 4);
+
+          span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $red;
+            color: $white;
+            @include toRem(width, 20);
+            @include toRem(height, 20);
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            right: -8px;
+            display: flex;
+            @include fontSize(11);
+            align-items: center;
+            justify-content: center;
+            font-weight: $light;
+          }
+          img {
+            width: 32px;
+            height: auto;
+            @include toRem(padding-top, 7);
+          }
+        }
+
+        &.signup-btn {
+          background: $orange_dark;
+          padding: 8px 30px;
+          border-radius: 20px;
+          color: $white;
+          font-weight: $light;
+          @include fontSize(16);
+          @include transition(.3);
+          cursor: pointer;
+
+          &:hover {
+            background: $primary;
+          }
+        }
+      }
+    }
+  }
+}

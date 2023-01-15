@@ -1,0 +1,27 @@
+@import "../../css/varable";
+
+.footer-wrapper {
+  display: flex;
+  background: $primary;
+  @include toRem(padding-top, 20);
+  @include toRem(padding-bottom, 20);
+  color: $white;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-icons {
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        list-style: none;
+        @include toRem(padding-left, 10);
+      }
+    }
+  }
+}

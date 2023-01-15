@@ -1,0 +1,52 @@
+@import "../../css/varable";
+
+.restaurante-card {
+  min-width: calc(100% / 3 - 20px);
+  width: calc(100% / 3 - 20px);
+  @include toRem(margin-left, 20);
+  @include toRem(margin-top, 40);
+
+  .restaurante-img {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .name {
+    @include fontSize(15);
+    font-weight: $semibold;
+    color: $primary;
+    @include toRem(padding-top, 12);
+  }
+
+  .cuisines {
+    @include fontSize(13);
+    color: $primary;
+    font-weight: $light;
+    @include toRem(padding-top, 5);
+  }
+
+  .meta-info {
+    @include toRem(padding-top, 8);
+    display: flex;
+    justify-content: space-between;
+
+    .rating {
+      @include fontSize(13);
+      color: $primary;
+      font-weight: $light;
+    }
+
+    .delivery-time {
+      @include fontSize(13);
+      color: $primary;
+      font-weight: $light;
+    }
+
+    .cost {
+      @include fontSize(13);
+      color: $primary;
+      font-weight: $light;
+    }
+  }
+}

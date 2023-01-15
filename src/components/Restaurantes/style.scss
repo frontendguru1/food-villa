@@ -1,0 +1,9 @@
+@import "../../css/varable";
+
+.restaurantes-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include toRem(margin-left, -20);
+  @include toRem(padding-bottom, 90);
+  
+}

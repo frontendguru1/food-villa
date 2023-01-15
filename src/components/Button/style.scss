@@ -1,0 +1,37 @@
+@import "../../css/varable";
+.btn {
+  border: 0;
+  padding: 0 25px; 
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: $extra_light;
+  @include toRem(border-radius, 22);
+  @include transition(.3);
+
+  &-small {
+    min-height: 34px;
+    @include fontSize(15px);
+  }
+
+  &-medium {
+    min-height: 44px;
+    @include fontSize(18);
+  }
+
+  &-large {
+    min-height: 54px;
+    @include fontSize(28px); 
+  }
+
+  &-default {
+    background: $orange_dark;
+    color: $white;
+
+    &:hover {
+      background: $orange_dark2;
+    }
+  }
+}

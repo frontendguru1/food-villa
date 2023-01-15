@@ -1,0 +1,31 @@
+@import "../../css/varable";
+.header-menus {
+  @include toRem(padding-left, 80);
+  flex: 1;
+  ul {
+    display: flex;
+    align-items: center;
+
+    li {
+      list-style: none;
+      @include fontSize(17);
+      font-weight: $medium;
+      @include toRem(padding-right, 30);
+      cursor: pointer;
+      @include transition(.3);
+
+      a {
+        color: $primary;
+        text-decoration: none;
+        
+        &:hover {
+          color: $orange_dark;
+        }
+      }
+
+      &:hover {
+        color: $orange_dark;
+      }
+    }
+  }
+}

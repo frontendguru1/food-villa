@@ -1,0 +1,32 @@
+@import "../../css/varable";
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include toRem(padding-top, 20);
+
+  .banner-left-col {
+    flex: 1;
+    @include toRem(padding-right, 30);
+
+    h1 {
+      @include fontSize(77);
+      font-weight: $bold;
+      color: $primary;
+      line-height: 140%;
+
+      span {
+        font-weight: $light;
+      }
+    }
+  }
+
+  .banner-img {
+    @include toRem(width, 550);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
