@@ -13,6 +13,21 @@
     align-items: center;
   }
 
+  .footer-logo {
+    width: 55px;
+    display: flex;
+    align-items: center;
+    @include fontSize(14);
+    font-weight: $light;
+    line-height: 130%;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      @include toRem(padding-right, 10);
+    }
+  }
+
   .social-icons {
     ul {
       display: flex;

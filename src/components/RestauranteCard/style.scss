@@ -1,15 +1,88 @@
 @import "../../css/varable";
 
+.restaurantes-list {
+  a {
+    min-width: calc(100% / 4 - 20px);
+    width: calc(100% / 4 - 20px);
+    @include toRem(margin-left, 20);
+    @include toRem(margin-top, 40);
+    @include toRem(border-radius, 3);
+    @include transition(.3);
+    overflow: hidden;
+    background: $white;
+    box-shadow: #ccc 0 0 12px;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: $panel_shadow2;
+      .restaurante-img {
+        // overflow: unset;
+        .card-btn {
+          top: 50%;
+          opacity: 1;
+        }
+
+        .img-overlay {
+          opacity: 1;
+        }
+
+        img {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}
 .restaurante-card {
-  min-width: calc(100% / 3 - 20px);
-  width: calc(100% / 3 - 20px);
-  @include toRem(margin-left, 20);
-  @include toRem(margin-top, 40);
+
+  .restaurant-info {
+    @include toRem(padding-left, 20);
+    @include toRem(padding-right, 20);
+    @include toRem(padding-bottom, 20);
+  }
 
   .restaurante-img {
+    position: relative;
+    overflow: hidden;
+
+    .img-overlay {
+      background: $black_alpha_60;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      @include transition(.3);
+    }
+
+    .card-btn {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      z-index: 10;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      @include transition(.3);
+
+      button {
+        background: $orange_dark;
+        color: $white;
+        @include fontSize(15);
+        border: 0;
+        @include toRem(height, 36);
+        @include toRem(width, 120);
+        @include toRem(border-radius, 22);
+        cursor: pointer;
+        box-shadow: $panel_shadow;
+      }
+    }
+
     img {
       max-width: 100%;
       height: auto;
+      display: block;
+      @include transition(.3);
     }
   }
   .name {
@@ -23,18 +96,31 @@
     @include fontSize(13);
     color: $primary;
     font-weight: $light;
+    @include toRem(min-height, 40);
     @include toRem(padding-top, 5);
   }
 
   .meta-info {
-    @include toRem(padding-top, 8);
+    @include toRem(padding-top, 15);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .rating {
       @include fontSize(13);
       color: $primary;
       font-weight: $light;
+      background: $orange_dark;
+      color: $white;
+      padding: 3px 13px;
+      @include toRem(border-radius, 22);
+      display: flex;
+      align-items: center;
+      font-weight: $medium;
+
+      img {
+        @include toRem(padding-right, 6);
+      }
     }
 
     .delivery-time {
@@ -48,5 +134,18 @@
       color: $primary;
       font-weight: $light;
     }
+  }
+
+  .promo-code {
+    background: url('../../assets/img/border_style.svg.png.svg') top center no-repeat;
+    background-size: cover;
+    padding: 25px 0 0 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    @include fontSize(12);
+    color: $orange_dark;
+    font-weight: $light;
+    font-weight: $light;
   }
 }

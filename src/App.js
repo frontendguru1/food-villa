@@ -6,15 +6,20 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 import Footer from "./components/Footer";
 import { AppRouters } from "./Routers/AppRouters";
+import NotFound from "./containers/NotFound";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 const AppContainer = () => {
   return (<>
+  <Provider store={store}>
     <div className={'app-container'}>
       <AppHeader />
-      <Banner />
+      {/* <Banner /> */}
       <Outlet />
     </div>
     <Footer />
+    </Provider>
   </>)
 }
 
@@ -22,6 +27,8 @@ const AppRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppContainer />,
+    errorElement: <NotFound />,
+
     children: AppRouters,
   }
 ]);

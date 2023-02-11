@@ -1,11 +1,16 @@
 import "./style.scss";
+import FooterLogo from "../../assets/img/food-villa-logo.svg";
 
 const Footer = () => {
   return (
     <>
     <div className={'footer-wrapper'}>
       <div className={'container'}>
-        <div className={'footer-logo'}>Food <span>Villa</span></div>
+        <div className={'footer-logo'}>
+          <img src={FooterLogo} alt={'Food Villa'} />
+          Food Villa
+
+        </div>
         <div className={'copyright'}>© 2023 Food Villa</div>
         <div className={'social-icons'}>
           <ul>

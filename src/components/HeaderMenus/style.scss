@@ -1,6 +1,6 @@
 @import "../../css/varable";
 .header-menus {
-  @include toRem(padding-left, 80);
+  @include toRem(padding-left, 60);
   flex: 1;
   ul {
     display: flex;
@@ -8,16 +8,20 @@
 
     li {
       list-style: none;
-      @include fontSize(17);
+      @include fontSize(16);
       font-weight: $medium;
       @include toRem(padding-right, 30);
       cursor: pointer;
       @include transition(.3);
 
+      &:last-child {
+        padding-right: 0;
+      }
+
       a {
         color: $primary;
         text-decoration: none;
-        
+
         &:hover {
           color: $orange_dark;
         }

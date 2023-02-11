@@ -1,0 +1,21 @@
+@import "../../css/varable";
+.restaurant-details-wrapper {
+  display: flex;
+  background: $white;
+  @include toRem(margin-top, 50);
+  @include toRem(margin-bottom, 50);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: #ccc 0 0 12px;
+
+  .restaurant-img {
+    img {
+      display: block;
+    }
+  }
+
+  .restaurant-details {
+    flex: 1;
+    @include toRem(padding-left, 30);
+  }
+}

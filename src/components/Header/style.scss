@@ -46,7 +46,7 @@
         list-style: none;
         @include toRem(margin-left, 26);
 
-        &:first-child {
+        &.cart-icon {
           position: relative;
           @include toRem(padding-top, 4);
 
@@ -87,6 +87,63 @@
 
           &:hover {
             background: $primary;
+          }
+        }
+
+        &.search-container {
+          position: relative;
+
+          input {
+            width: 100%;
+            border: 1px solid $grey;
+            @include toRem(padding-top, 8);
+            @include toRem(padding-right, 38);
+            @include toRem(padding-bottom, 8);
+            @include toRem(padding-left, 12);
+            // background: url('../../assets/img/search-icon.svg') 91% 10px no-repeat $white;
+            @include toRem(border-radius, 22);
+            @include toRem(min-height, 39);
+            @include fontSize(16px);
+            color: $primary;
+            font-weight: $bold;
+
+            &:focus {
+              outline: 0;
+
+              & + .search-btn {
+                cursor: pointer;
+              }
+            }
+          }
+
+          .search-btn {
+            border: 0;
+            background: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            @include toRem(border-radius, 22);
+            width: 50px;
+            height: 38px;
+            cursor: pointer;
+            @include transition(.4);
+
+            svg,
+            path {
+              @include transition(.1);
+            }
+
+            &.active {
+              background: $orange_dark;
+              svg,
+              path {
+                fill: $white;
+              }
+            }
           }
         }
       }
