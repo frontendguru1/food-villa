@@ -38,6 +38,7 @@ const HeaderIcons = ({handleSearch, searchIconClass}) => {
 </svg></>);
 
 const cartItems = useSelector(store => store.cart.items);
+console.log(cartItems, '=> cartItems')
 
   return (
     <>

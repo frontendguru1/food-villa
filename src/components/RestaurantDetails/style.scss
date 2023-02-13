@@ -1,12 +1,13 @@
 @import "../../css/varable";
 .restaurant-details-wrapper {
-  display: flex;
+  
   background: $white;
   @include toRem(margin-top, 50);
   @include toRem(margin-bottom, 50);
+  // @include toRem(padding, 22);
   border-radius: 6px;
-  overflow: hidden;
   box-shadow: #ccc 0 0 12px;
+  overflow: hidden;
 
   .restaurant-img {
     img {
@@ -18,4 +19,88 @@
     flex: 1;
     @include toRem(padding-left, 30);
   }
+
+  .restaurant-details-top {
+    display: flex;
+    overflow: hidden;
+    @include toRem(padding, 22);
+  }
+
+  .menu-item-wrapper {
+    .menu-item-container {
+      display: flex;
+      border-top: 1px solid $light_gray;
+      @include toRem(padding-top, 20);
+      @include toRem(padding-bottom, 20);
+
+      &:nth-child(1) {
+        border-top: 0;
+      }
+
+      .menu-item-desc {
+        flex: 1;
+        @include toRem(padding-right, 30);
+
+        .item-title {
+          span {
+            display: block;
+            color: $orange_dark;
+            @include fontSize(11);
+            @include toRem(padding-bottom, 5);
+          }
+
+          h3 {
+            @include fontSize(14);
+            color: $primary;
+            font-weight: $semibold;
+            margin: 0;
+          }
+        }
+
+        .item-desc {
+          @include fontSize(13);
+          font-weight: $light;
+          color: $primary;
+          @include toRem(padding-top, 8);
+        }
+      }
+
+      .menu-item-img {
+        width: 200px;
+        @include toRem(border-radius, 6);
+        background: $secondry;
+        min-height: 125px;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: auto;
+          @include toRem(border-radius, 6);
+          display: block;
+        }
+
+        // Add to cart
+        .add-cart-btn {
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  // Cart
+  .cart-info {
+    @include toRem(min-width, 420);
+    @include toRem(padding-left, 30);
+    position: sticky;
+    top: 0;
+  }
+
+  .restaurant-details-bottom {
+    display: flex;
+    @include toRem(padding, 22);
+  }
+
 }
